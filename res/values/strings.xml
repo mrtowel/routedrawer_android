@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">locate</string>
+    <string name="row_image_description">row image description</string>
+    <string name="row_label">row label</string>
+
+</resources>
