@@ -16,7 +16,7 @@ public class DatabaseModel<T, ID> {
         this.mContext = mContext;
     }
 
-    DatabaseModel() {
+    private DatabaseModel() {
     }
 
 

@@ -25,9 +25,6 @@
         <module name="activeandroid-tests" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="activeandroid-tests" target="1.6" />
-    </bytecodeTargetLevel>
   </component>
 </project>
 

@@ -5,6 +5,7 @@
       <profile>
         <option name="device" value="3.7in WVGA (Nexus One)" />
         <option name="deviceConfiguration" value="Portrait" />
+        <option name="localeLanguage" value="en" />
         <option name="targetHashString" value="android-18" />
         <option name="theme" value="Theme" />
       </profile>
@@ -23,31 +24,34 @@
       </GlobalState>
     </option>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java" line="15" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d17da3fe-3158-4565-9f89-adb57af81e2c" name="Default" comment="" />
     <ignored path="locate.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/MainActivity.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384301799459" ignored="false" />
+    <file path="/MainActivity.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385309830707" ignored="false" />
     <file path="/LocationServiceHelper.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384047731151" ignored="false" />
     <file path="/LocationService.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384142002469" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384614443793" ignored="false" />
-    <file path="/fragment.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384609338896" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385292716048" ignored="false" />
+    <file path="/fragment.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385261482560" ignored="false" />
     <file path="/MyLocationListener.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384140841102" ignored="false" />
     <file path="/MyLocation.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384134182749" ignored="false" />
     <file path="/PostLocationTask.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384141719480" ignored="false" />
-    <file path="/Dummy.txt" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384609409488" ignored="false" />
+    <file path="/Dummy.txt" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385307660771" ignored="false" />
     <file path="$PROJECT_DIR$/../../RailsProjects/manager/app/controllers/welcome_controller.rb" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384612218733" ignored="false" />
     <file path="/welcome_controller.rb" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384612213508" ignored="false" />
     <file path="/LocationApp.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384099210687" ignored="false" />
     <file path="/DatabaseHelper.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384134772716" ignored="false" />
     <file path="/LocateDatabaseHelper.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384134877895" ignored="false" />
     <file path="/LocateDatabaseHelperManager.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384104841983" ignored="false" />
-    <file path="/DatabaseModel.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384138375977" ignored="false" />
+    <file path="/DatabaseModel.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384657384348" ignored="false" />
     <file path="/LocationProcessor.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384136828596" ignored="false" />
     <file path="/DataProcessor.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384140183011" ignored="false" />
     <file path="$PROJECT_DIR$/src/pl/towelrail/locate/rest.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384142235706" ignored="false" />
-    <file path="/DatabaseTools.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384218634847" ignored="false" />
-    <file path="/PostTowelLocationTask.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384614652848" ignored="false" />
+    <file path="/DatabaseTools.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384655756347" ignored="false" />
+    <file path="/PostTowelLocationTask.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385160885074" ignored="false" />
     <file path="$PROJECT_DIR$/../../RailsProjects/manager/config.ru" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384212114773" ignored="false" />
     <file path="/config.ru" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384206012802" ignored="false" />
     <file path="/HttpTools.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384206205253" ignored="false" />
@@ -63,14 +67,24 @@
     <file path="/LocationListFragment.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384293664068" ignored="false" />
     <file path="/LocationAdapter.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384300715497" ignored="false" />
     <file path="/rowlayout.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384295484263" ignored="false" />
-    <file path="/strings.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384295395323" ignored="false" />
+    <file path="/strings.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385310310938" ignored="false" />
     <file path="/LocationListActivity.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384301013924" ignored="false" />
-    <file path="/TowelLocationServiceHelper.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384298412170" ignored="false" />
+    <file path="/TowelLocationServiceHelper.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385312832398" ignored="false" />
     <file path="/ServiceState.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384297200422" ignored="false" />
-    <file path="/TowelLocationService.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384298837978" ignored="false" />
-    <file path="/TowelLocationListener.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384612633413" ignored="false" />
-    <file path="/PostTowelLocationReceiver.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384614424027" ignored="false" />
-    <file path="/.gitignore" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384615360962" ignored="false" />
+    <file path="/TowelLocationService.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385311267518" ignored="false" />
+    <file path="/TowelLocationListener.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385161611946" ignored="false" />
+    <file path="/PostTowelLocationReceiver.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385161385536" ignored="false" />
+    <file path="/.gitignore" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385313058737" ignored="false" />
+    <file path="/TaskListener.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384639762159" ignored="false" />
+    <file path="/ProgressReceiver.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1384653010760" ignored="false" />
+    <file path="/MapActivity.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385158900765" ignored="false" />
+    <file path="/TowelLocation.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385257812318" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/google-play-services_lib/gen/com/google/android/gms/R.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385169283084" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/google-play-services_lib/gen/com/google/android/gms/Manifest.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385169283084" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/google-play-services_lib/gen/com/google/android/gms/BuildConfig.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385169284270" ignored="false" />
+    <file path="/opts_menu.xml" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385308882107" ignored="false" />
+    <file path="/GpsStatusReceiver.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385312451654" ignored="false" />
+    <file path="/TowelLocationServiceBinder.java" changelist="d17da3fe-3158-4565-9f89-adb57af81e2c" time="1385311945264" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,23 +135,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java" line="10" class="pl.towelrail.locate.receivers.PostTowelLocationReceiver" package="pl.towelrail.locate.receivers">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -148,51 +146,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PostTowelLocationTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/PostTowelLocationTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="83" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="31" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TowelHttpRequestInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/TowelHttpRequestInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TowelHttpResponseInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/TowelHttpResponseInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostTowelLocationReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="160" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
+            <state line="34" column="41" selection-start="1325" selection-end="1327" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3104#3112#0" expanded="true" />
+                <element signature="e#4505#5211#0" expanded="true" />
+                <element signature="e#5200#5201#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opts_menu.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/menu/opts_menu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="64" selection-start="539" selection-end="539" vertical-scroll-proportion="-3.4615386">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TowelLocationServiceHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="119" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,7 +184,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+            <state line="1" column="5" selection-start="13" selection-end="13" vertical-scroll-proportion="0.033898305">
               <folding />
             </state>
           </provider>
@@ -209,7 +193,16 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="60" selection-start="1037" selection-end="1057" vertical-scroll-proportion="0.0">
+            <state line="13" column="47" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TowelLocationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="23" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,16 +211,16 @@
       <file leaf-file-name="TowelLocationListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0">
+            <state line="21" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/ServiceState.java">
+      <file leaf-file-name="PostTowelLocationReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+            <state line="8" column="38" selection-start="224" selection-end="249" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -251,21 +244,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/db/DatabaseTools.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/view/Dr.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/view/LocationListFragment.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/rowlayout.xml" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/ServiceState.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationService.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/view/LocationAdapter.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/view/LocationListActivity.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationListener.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/pl/towelrail/locate/http/PostTowelLocationTask.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationListener.java" />
+        <option value="$PROJECT_DIR$/../sdk/extras/google/google_play_services/libproject/google-play-services_lib/google-play-services_lib.iml" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/receivers/ProgressReceiver.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/data/TowelLocation.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/opts_menu.xml" />
+        <option value="$PROJECT_DIR$/res/menu/opts_menu.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceBinder.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationService.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/receivers/GpsStatusReceiver.java" />
+        <option value="$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -281,7 +274,7 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
+    <option name="x" value="142" />
     <option name="y" value="22" />
     <option name="width" value="1713" />
     <option name="height" value="986" />
@@ -294,20 +287,108 @@
             <id />
           </State>
           <State>
-            <id>Django</id>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issues</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>FlexUnit inspections</id>
+          </State>
+          <State>
+            <id>FreeMarker inspections</id>
+          </State>
+          <State>
+            <id>Gems</id>
           </State>
           <State>
             <id>General</id>
           </State>
           <State>
-            <id>XPath</id>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Google App Engine</id>
+          </State>
+          <State>
+            <id>Google App Engine (Python)</id>
+          </State>
+          <State>
+            <id>Initialization issues</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>J2ME Plugin</id>
+          </State>
+          <State>
+            <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JBoss Seam issues</id>
+          </State>
+          <State>
+            <id>JSF annotated elements errors</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Language Injection</id>
+          </State>
+          <State>
+            <id>Logging issues</id>
+          </State>
+          <State>
+            <id>Naming conventions</id>
+          </State>
+          <State>
+            <id>Pattern Validation</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+          <State>
+            <id>Rails</id>
+          </State>
+          <State>
+            <id>Security issues</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>DefaultFileTemplate</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -344,6 +425,16 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,35 +453,114 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="receivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="locate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="Errors" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ActiveAndroid/dist/ActiveAndroid.jar!/" />
-    <property name="AndroidLayoutSelectedEditor" value="android-designer" />
-    <property name="project.structure.side.proportion" value="0.21089223" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar!/" />
+    <property name="DEBUGGABLE_DEVICE" value="192.168.56.101:5555" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="DEBUGGABLE_PROCESS" value="pl.towelrail.locate" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="AndroidTargetDevices" value="192.168.56.101:5555" />
     <property name="Repository.Attach.Sources" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="AndroidLayoutSelectedEditor" value="text-editor" />
+    <property name="project.structure.side.proportion" value="0.21089223" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -399,6 +569,12 @@
     <option name="myDjangoConsoleState">
       <PyConsoleSettings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/menu" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.locate">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -433,19 +609,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -472,6 +635,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -541,7 +717,15 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Executor" />
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="JRebel Debug" />
+      <ConfigurationWrapper RunnerId="JRebel Executor" />
       <method />
     </configuration>
     <list size="1">
@@ -553,6 +737,10 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructuralSearchPlugin">
+    <replaceConfiguration name="user defined" text="onResume" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="onResume" history="1" />
+    <replaceConfiguration name="user defined" text="createMapFragment();" recursive="false" caseInsensitive="true" type="JAVA" reformatAccordingToStyle="true" shortenFQN="true" replacement="" history="1" />
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -580,39 +768,41 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="22" width="1713" height="986" extended-state="0" />
+    <frame x="142" y="22" width="1713" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3995381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32678983" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21415716" sideWeight="0.6720554" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32794458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32678983" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32678983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984986" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23786408" sideWeight="0.6004619" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18536292" sideWeight="0.6004619" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976957" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24955009" sideWeight="0.6720554" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22915417" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329934" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -680,122 +870,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/../sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar!/com/google/android/gms/maps/GoogleMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="22" selection-start="3341" selection-end="3341" vertical-scroll-proportion="0.34289277" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/content/ComponentCallbacks2.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="0.16245487" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="160" selection-end="160" vertical-scroll-proportion="0.16635859" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/data/TowelLocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="74" selection-start="2148" selection-end="2184" vertical-scroll-proportion="0.0">
+        <state line="42" column="0" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.4857143">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/db/DatabaseHelper.java">
+    <entry file="file://$PROJECT_DIR$/res/menu/opts_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
+        <state line="10" column="64" selection-start="539" selection-end="539" vertical-scroll-proportion="-3.4615386">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="674" selection-end="685" vertical-scroll-proportion="0.42687747">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationService.java">
+    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/content/Intent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="53" selection-start="990" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/view/LocationListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="41" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/ServiceState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/TowelHttpRequestInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/TowelHttpResponseInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+        <state line="471" column="18" selection-start="32669" selection-end="32669" vertical-scroll-proportion="0.21491228">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="60" selection-start="1037" selection-end="1057" vertical-scroll-proportion="0.0">
+        <state line="13" column="47" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/content/Context.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="35" selection-start="11504" selection-end="11504" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="38" selection-start="224" selection-end="249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="23" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="31" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="34" column="41" selection-start="1325" selection-end="1327" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3104#3112#0" expanded="true" />
+            <element signature="e#4505#5211#0" expanded="true" />
+            <element signature="e#5200#5201#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/os/AsyncTask.class">
+    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/GpsStatusReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="62" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="12" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.33273056">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#981#1229#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1295#1543#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0">
+        <state line="21" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../sdk/platforms/android-18/android.jar!/android/location/LocationManager.class">
+    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/service/TowelLocationServiceHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="22" column="119" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/http/PostTowelLocationTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="83" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/towelrail/locate/receivers/PostTowelLocationReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="160" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+        <state line="1" column="5" selection-start="13" selection-end="13" vertical-scroll-proportion="0.033898305">
           <folding />
         </state>
       </provider>
@@ -853,7 +1043,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|locate</last-edited>
+          <last-edited>locate</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -877,7 +1067,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.github.kevinsawicki:http-request:5.5</last-edited>
+          <last-edited>com.j256.ormlite:ormlite-android:4.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

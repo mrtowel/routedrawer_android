@@ -2,6 +2,7 @@ package pl.towelrail.locate.service;
 
 import android.content.Context;
 import android.content.Intent;
+import pl.towelrail.locate.receivers.GpsStatusReceiver;
 
 public class TowelLocationServiceHelper {
     public final static String LOCATION_MANAGER = "location_manager";
@@ -14,6 +15,8 @@ public class TowelLocationServiceHelper {
         if (ourInstance == null) {
             ourInstance = new TowelLocationServiceHelper(context);
         }
+        context.sendBroadcast(new Intent(GpsStatusReceiver.class.getName()));
+
         return ourInstance;
     }
 
@@ -26,13 +29,15 @@ public class TowelLocationServiceHelper {
     }
 
     public void initialize() {
-        if (mContext != null) {
+        if (mContext != null && mState != ServiceState.RUNNING) {
             Intent intent = new Intent(mContext, TowelLocationService.class);
             mContext.startService(intent);
-
             mState = ServiceState.RUNNING;
         }
     }
 
-
+    public void stop() {
+        ourInstance = null;
+        mState = ServiceState.STOPPED;
+    }
 }

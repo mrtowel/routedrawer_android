@@ -3,5 +3,14 @@
     <string name="app_name">locate</string>
     <string name="row_image_description">row image description</string>
     <string name="row_label">row label</string>
-
+    <string name="please_wait">Please wait…</string>
+    <string name="http_request">Connecting to data source</string>
+    <string name="start_recording">Start recording</string>
+    <string name="stop_recording">Stop recording</string>
+    <string name="view_last_record_session">View last recorded items</string>
+    <string name="view_all_recording_sessions">View all recordings</string>
+    <string name="gps_dialog_title">GPS</string>
+    <string name="turn_on_gps">For best results, please turn on your GPS receiver</string>
+    <string name="gps_settings">Go to settings</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -14,6 +14,7 @@ public class TowelLocationService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Toast.makeText(getApplicationContext(), "start", Toast.LENGTH_LONG).show();
+
         mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         mLocationManager.requestLocationUpdates(
                 mLocationManager.getBestProvider(new Criteria(), true), 0, 5,
@@ -27,5 +28,12 @@ public class TowelLocationService extends Service {
     public IBinder onBind(Intent intent) {
         Toast.makeText(getApplicationContext(), "bind", Toast.LENGTH_LONG).show();
         return null;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();    //To change body of overridden methods use File | Settings | File Templates.
+        TowelLocationServiceHelper.getInstance(this).stop();
+
     }
 }

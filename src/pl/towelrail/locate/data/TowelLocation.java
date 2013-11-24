@@ -1,14 +1,17 @@
 package pl.towelrail.locate.data;
 
 import android.location.Location;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Expose;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.io.Serializable;
+
 @DatabaseTable(tableName = "location")
-public class TowelLocation {
+public class TowelLocation implements Serializable {
     @Expose
     @DatabaseField
     private final String api_key = "fR5UpXDIoPqyVQUR6d2O3LmwqZc6CEZ8";
@@ -93,9 +96,13 @@ public class TowelLocation {
         this.id = id;
     }
 
+    public LatLng getLatLng()
+    {
+        return new LatLng(getLat(), getLng());
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
         Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
         return gson.toJson(this);
     }

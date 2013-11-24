@@ -18,6 +18,16 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.2.4" level="project" />
     <orderEntry type="library" name="com.j256.ormlite:ormlite-android:4.9" level="project" />
     <orderEntry type="library" name="com.github.kevinsawicki:http-request:5.5" level="project" />
+    <orderEntry type="module" module-name="google-play-services_lib" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
