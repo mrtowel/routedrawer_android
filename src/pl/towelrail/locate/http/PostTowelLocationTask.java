@@ -1,23 +1,29 @@
 package pl.towelrail.locate.http;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.util.Log;
 import com.github.kevinsawicki.http.HttpRequest;
 import pl.towelrail.locate.R;
-import pl.towelrail.locate.receivers.PostTowelLocationReceiver;
+import pl.towelrail.locate.data.TowelRoute;
+import pl.towelrail.locate.receivers.DatabaseUpdateReceiver;
 import pl.towelrail.locate.receivers.ProgressReceiver;
-import pl.towelrail.locate.service.TowelLocationServiceHelper;
 
-public class PostTowelLocationTask extends AsyncTask<String, Void, String> {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayList<TowelHttpResponse>> {
     private Context mContext;
-    private Intent mProgressReceiverIntent;
+    private Intent mProgressDialogIntent;
+    private String mUrl;
 
-    public PostTowelLocationTask(Context mContext) {
+    public PostTowelLocationTask(Context mContext, String mUrl) {
         this.mContext = mContext;
+        this.mUrl = mUrl;
     }
 
     @Override
@@ -26,31 +32,55 @@ public class PostTowelLocationTask extends AsyncTask<String, Void, String> {
         String title = resources.getString(R.string.http_request);
         String message = resources.getString(R.string.please_wait);
 
-        mProgressReceiverIntent = new Intent(ProgressReceiver.class.getName());
-        mProgressReceiverIntent.putExtra("show_dialog", true);
-
-        mContext.sendBroadcast(mProgressReceiverIntent);
+        mProgressDialogIntent = new Intent(ProgressReceiver.class.getName());
+        mProgressDialogIntent.putExtra("show_dialog", true);
+        mProgressDialogIntent.putExtra("title", title);
+        mProgressDialogIntent.putExtra("message", message);
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        HttpRequest request = HttpRequest.post(params[0])
-                .contentType(HttpRequest.CONTENT_TYPE_JSON)
-                .acceptJson()
-                .acceptGzipEncoding()
-                .uncompress(true)
-                .acceptCharset(HttpRequest.CHARSET_UTF8)
-                .send(params[1]);
+    protected ArrayList<TowelHttpResponse> doInBackground(TowelRoute... params) {
+        ArrayList<TowelHttpResponse> responses = new ArrayList<TowelHttpResponse>();
 
-        String body = request.body();
-        return body;
+        mProgressDialogIntent.putExtra("progress_max", params.length);
+        mContext.sendBroadcast(mProgressDialogIntent);
+
+        for (int i = 0; i < params.length; i++) {
+            HttpRequest request = HttpRequest.post(mUrl)
+                    .contentType(HttpRequest.CONTENT_TYPE_JSON)
+                    .acceptJson()
+                    .acceptGzipEncoding()
+                    .uncompress(true)
+                    .acceptCharset(HttpRequest.CHARSET_UTF8)
+                    .send(params[i].toString());
+
+            responses.add(new TowelHttpResponse(request.code(), request.body(), params[i].getId()));
+            publishProgress(i);
+            request.disconnect();
+        }
+        return responses;
     }
 
     @Override
-    protected void onPostExecute(String s) {
-        Log.d(PostTowelLocationTask.class.getName(), s);
+    protected void onProgressUpdate(Integer... values) {
+        mProgressDialogIntent.removeExtra("show_dialog");
+        mProgressDialogIntent.putExtra("update_progress", true);
+        mContext.sendBroadcast(mProgressDialogIntent);
 
-        mProgressReceiverIntent = new Intent(ProgressReceiver.class.getName());
-        mContext.sendBroadcast(mProgressReceiverIntent);
+        Log.d(PostTowelLocationTask.class.getName(), Arrays.toString(values));
+    }
+
+    @Override
+    protected void onPostExecute(ArrayList<TowelHttpResponse> responses) {
+        mProgressDialogIntent.removeExtra("update_progress");
+        mProgressDialogIntent.putExtra("show_dialog", false);
+        mContext.sendBroadcast(mProgressDialogIntent);
+
+        Intent updateDb = new Intent(DatabaseUpdateReceiver.class.getName());
+        updateDb.putExtra("post_route_responses", responses);
+        mContext.sendBroadcast(updateDb);
+
+        Log.d(PostTowelLocationTask.class.getName(), responses.toString());
+
     }
 }

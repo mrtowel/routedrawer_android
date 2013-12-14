@@ -1,38 +1,33 @@
 package pl.towelrail.locate;
 
 import android.app.FragmentTransaction;
-import android.content.*;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
-import pl.towelrail.locate.data.TowelLocation;
+import pl.towelrail.locate.data.TowelRoute;
 import pl.towelrail.locate.db.DatabaseHelper;
-import pl.towelrail.locate.receivers.GpsStatusReceiver;
-import pl.towelrail.locate.receivers.ProgressReceiver;
+import pl.towelrail.locate.receivers.*;
 import pl.towelrail.locate.service.TowelLocationServiceHelper;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import pl.towelrail.locate.view.LocationListActivity;
 
 public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
-    private List<TowelLocation> locations;
-    private BroadcastReceiver mDrawLocationReceiver;
+    private DrawLocationReceiver mDrawLocationReceiver;
     private GpsStatusReceiver mGpsStatusReceiver;
+    private NetworkStatusReceiver mNetworkStatusReceiver;
+    private PostTowelLocationReceiver mPostTowelLocationReceiver;
+    private ProgressReceiver mProgressReceiver;
     private MapFragment mMapFragment;
     private GoogleMap mGmap;
 
@@ -41,27 +36,48 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         createMapFragment();
-
-
-        locations = new ArrayList<TowelLocation>();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.opts_menu, menu);
+
+        if (TowelLocationServiceHelper.getInstance(this).isRunning()) {
+            MenuItem item = menu.findItem(R.id.start_recording_item);
+            if (item != null) {
+                item.setIcon(android.R.drawable.ic_menu_save);
+            }
+        }
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        TowelLocationServiceHelper helper = TowelLocationServiceHelper.getInstance(this);
+
         switch (item.getItemId()) {
-            case R.id.start_recording:
-                TowelLocationServiceHelper helper = TowelLocationServiceHelper.getInstance(this);
-                helper.initialize();
+            case R.id.start_recording_item:
+                if (helper.isRunning()) {
+                    helper.stop();
+                    item.setIcon(android.R.drawable.presence_video_online);
+
+                } else {
+                    mGmap.clear();
+                    helper.initialize();
+                    item.setIcon(android.R.drawable.presence_video_busy);
+                }
                 break;
-            case R.id.view_last_record_session:
-            case R.id.view_all_recording_sessions:
+            case R.id.view_all_recording_sessions_item:
+                Intent intent = new Intent(getApplicationContext(), LocationListActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.send_data_to_server_item:
+                if (!helper.isRunning()) {
+                    sendBroadcast(new Intent(PostTowelLocationReceiver.class.getName()));
+                } else {
+                    Toast.makeText(this, "Stop recording first!", Toast.LENGTH_SHORT).show();
+                }
                 break;
             default:
                 break;
@@ -81,84 +97,52 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     protected void onPause() {
         super.onPause();
 
-//        unregisterReceiver(mProgressReceiver);
+        unregisterReceiver(mProgressReceiver);
         unregisterReceiver(mDrawLocationReceiver);
         unregisterReceiver(mGpsStatusReceiver);
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        Set<String> locationSet = new HashSet<String>();
-        for (TowelLocation towelLocation : locations) {
-            locationSet.add(towelLocation.toString());
-        }
-
-        editor.putStringSet("locations", locationSet);
-        editor.commit();
+        unregisterReceiver(mNetworkStatusReceiver);
+        unregisterReceiver(mPostTowelLocationReceiver);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-        Set<String> locationSet = preferences.getStringSet("locations", new HashSet<String>());
-
-        if (locationSet.size() > 0) {
-            for (String jsonLocation : locationSet) {
-                locations.add(gson.fromJson(jsonLocation, TowelLocation.class));
-            }
-        }
-
-
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        Location lastLocation = locationManager
-                .getLastKnownLocation(locationManager.getBestProvider(new Criteria(), true));
-
         mGmap = mMapFragment.getMap();
         mGmap.getUiSettings().setCompassEnabled(true);
         mGmap.setMyLocationEnabled(true);
 
-        try {
-
-            mGmap.animateCamera(CameraUpdateFactory
-                    .newLatLngZoom(new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude()), 10));
-        } catch (Exception e) {
-
+        TowelLocationServiceHelper helper = TowelLocationServiceHelper.getInstance(this);
+        if (helper.isRunning() && helper.getCurrentRoute().getLocations() != null) {
+            TowelRoute.drawRoute(helper.getCurrentRoute(), mGmap);
         }
 
+        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        Location lastLocation = locationManager
+                .getLastKnownLocation(locationManager.getBestProvider(new Criteria(), true));
+        if (lastLocation != null) {
+            mGmap.animateCamera(CameraUpdateFactory
+                    .newLatLngZoom(new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude()), 10));
+        }
 
-        mDrawLocationReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                TowelLocation location = (TowelLocation) intent.getSerializableExtra("location");
+        mDrawLocationReceiver = new DrawLocationReceiver(mGmap, this);
+        IntentFilter filter = new IntentFilter(DrawLocationReceiver.class.getName());
+        registerReceiver(mDrawLocationReceiver, filter);
 
-                LatLng currentLatLng = new LatLng(location.getLat(), location.getLng());
-                mGmap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12));
-                mGmap.setMyLocationEnabled(true);
-
-                if (locations.size() > 0) {
-                    mGmap.addPolyline(new PolylineOptions().add(currentLatLng).add(locations.get(locations.size() - 1).getLatLng()));
-                }
-                locations.add(location);
-            }
-        };
-        IntentFilter mLocationFilter = new IntentFilter("TowelLocationReceiver");
-        registerReceiver(mDrawLocationReceiver, mLocationFilter);
-
-
-        ProgressReceiver mProgressReceiver = new ProgressReceiver();
-        IntentFilter mProgressFilter = new IntentFilter(ProgressReceiver.class.getName());
-//        registerReceiver(mProgressReceiver, mProgressFilter);
+        mProgressReceiver = new ProgressReceiver(this);
+        filter = new IntentFilter(ProgressReceiver.class.getName());
+        registerReceiver(mProgressReceiver, filter);
 
         mGpsStatusReceiver = new GpsStatusReceiver(locationManager);
-        IntentFilter mGpsFilter = new IntentFilter(GpsStatusReceiver.class.getName());
-        registerReceiver(mGpsStatusReceiver, mGpsFilter);
-    }
+        filter = new IntentFilter(GpsStatusReceiver.class.getName());
+        registerReceiver(mGpsStatusReceiver, filter);
 
-    @Override
-    protected void onStop() {
-        super.onStop();
+        mNetworkStatusReceiver = new NetworkStatusReceiver();
+        filter = new IntentFilter(NetworkStatusReceiver.class.getName());
+        registerReceiver(mNetworkStatusReceiver, filter);
+
+        mPostTowelLocationReceiver = new PostTowelLocationReceiver(this);
+        filter = new IntentFilter(PostTowelLocationReceiver.class.getName());
+        registerReceiver(mPostTowelLocationReceiver, filter);
     }
 }

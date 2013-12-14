@@ -19,17 +19,18 @@ public class MediaType {
     /**
      * Creates a new instance of MediaType with the supplied type, subtype and
      * parameters.
-     * @param type the primary type, null is equivalent to
-     * {@link #MEDIA_TYPE_WILDCARD}.
-     * @param subtype the subtype, null is equivalent to
-     * {@link #MEDIA_TYPE_WILDCARD}.
+     *
+     * @param type       the primary type, null is equivalent to
+     *                   {@link #MEDIA_TYPE_WILDCARD}.
+     * @param subtype    the subtype, null is equivalent to
+     *                   {@link #MEDIA_TYPE_WILDCARD}.
      * @param parameters a map of media type parameters, null is the same as an
-     * empty map.
+     *                   empty map.
      */
     public MediaType(String type, String subtype, Map<String, String> parameters) {
-        this.type = type==null ? MEDIA_TYPE_WILDCARD : type;
-        this.subtype = subtype==null ? MEDIA_TYPE_WILDCARD : subtype;
-        if (parameters==null) {
+        this.type = type == null ? MEDIA_TYPE_WILDCARD : type;
+        this.subtype = subtype == null ? MEDIA_TYPE_WILDCARD : subtype;
+        if (parameters == null) {
             this.parameters = emptyMap;
         } else {
             Map<String, String> map = new TreeMap<String, String>(new Comparator<String>() {
@@ -37,21 +38,23 @@ public class MediaType {
                     return o1.compareToIgnoreCase(o2);
                 }
             });
-            for (Map.Entry<String, String> e: parameters.entrySet()) {
+            for (Map.Entry<String, String> e : parameters.entrySet()) {
                 map.put(e.getKey().toLowerCase(), e.getValue());
             }
             this.parameters = Collections.unmodifiableMap(map);
         }
     }
+
     /**
      * Creates a new instance of MediaType with the supplied type and subtype.
-     * @param type the primary type, null is equivalent to
-     * {@link #MEDIA_TYPE_WILDCARD}
+     *
+     * @param type    the primary type, null is equivalent to
+     *                {@link #MEDIA_TYPE_WILDCARD}
      * @param subtype the subtype, null is equivalent to
-     * {@link #MEDIA_TYPE_WILDCARD}
+     *                {@link #MEDIA_TYPE_WILDCARD}
      */
     public MediaType(String type, String subtype) {
-        this(type,subtype,emptyMap);
+        this(type, subtype, emptyMap);
     }
 
     /**

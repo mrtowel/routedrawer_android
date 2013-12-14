@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">locate</string>
+    <string name="app_name">Quick Route</string>
     <string name="row_image_description">row image description</string>
     <string name="row_label">row label</string>
     <string name="please_wait">Please wait…</string>
     <string name="http_request">Connecting to data source</string>
     <string name="start_recording">Start recording</string>
     <string name="stop_recording">Stop recording</string>
-    <string name="view_last_record_session">View last recorded items</string>
     <string name="view_all_recording_sessions">View all recordings</string>
     <string name="gps_dialog_title">GPS</string>
     <string name="turn_on_gps">For best results, please turn on your GPS receiver</string>
     <string name="gps_settings">Go to settings</string>
     <string name="cancel">Cancel</string>
+    <string name="send_data_to_server_item">Send data to server</string>
+    <string name="history_label">Saved routes</string>
+    <string name="network_dialog_title">Networking</string>
+    <string name="turn_on_network">Internet connection unavailable. Check your settings.</string>
+    <string name="network_settings">Go to settings</string>
 </resources>

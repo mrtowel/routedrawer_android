@@ -3,37 +3,39 @@ package pl.towelrail.locate.service;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.location.Criteria;
 import android.location.LocationManager;
 import android.os.IBinder;
 import android.widget.Toast;
+import pl.towelrail.locate.R;
 
 public class TowelLocationService extends Service {
     private LocationManager mLocationManager;
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Toast.makeText(getApplicationContext(), "start", Toast.LENGTH_LONG).show();
 
         mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         mLocationManager.requestLocationUpdates(
                 mLocationManager.getBestProvider(new Criteria(), true), 0, 5,
                 new TowelLocationListener(getApplicationContext()));
 
-        return Service.START_STICKY;
+        Toast.makeText(getApplicationContext(), getText(R.id.start_recording_toast), Toast.LENGTH_LONG).show();
+
+        return Service.START_NOT_STICKY;
     }
 
 
     @Override
     public IBinder onBind(Intent intent) {
-        Toast.makeText(getApplicationContext(), "bind", Toast.LENGTH_LONG).show();
         return null;
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();    //To change body of overridden methods use File | Settings | File Templates.
-        TowelLocationServiceHelper.getInstance(this).stop();
+        super.onDestroy();
 
+        Toast.makeText(getApplicationContext(), getText(R.id.stop_recording_toast), Toast.LENGTH_SHORT).show();
     }
 }

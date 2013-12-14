@@ -10,7 +10,7 @@ import android.provider.Settings;
 import android.widget.Toast;
 import pl.towelrail.locate.R;
 
-public class GpsStatusReceiver extends BroadcastReceiver{
+public class GpsStatusReceiver extends BroadcastReceiver {
     private LocationManager mLocationManager;
 
     public GpsStatusReceiver(LocationManager mLocationManager) {
@@ -19,13 +19,13 @@ public class GpsStatusReceiver extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (!mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+        if (!mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             AlertDialog gpsDialog = createGpsSettingsDialog(context);
             gpsDialog.show();
         }
     }
 
-    private AlertDialog createGpsSettingsDialog(final Context ctx){
+    private AlertDialog createGpsSettingsDialog(final Context ctx) {
         DialogInterface.OnClickListener mGpsPositiveListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

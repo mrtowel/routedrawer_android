@@ -2,26 +2,18 @@ package pl.towelrail.locate.service;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.location.Location;
 import android.location.LocationListener;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
 import pl.towelrail.locate.data.TowelLocation;
+import pl.towelrail.locate.data.TowelRoute;
 import pl.towelrail.locate.db.DatabaseModel;
 import pl.towelrail.locate.db.DatabaseTools;
-import pl.towelrail.locate.http.PostTowelLocationTask;
-import pl.towelrail.locate.receivers.PostTowelLocationReceiver;
-
-import java.util.Date;
-import java.util.List;
+import pl.towelrail.locate.receivers.DrawLocationReceiver;
 
 public class TowelLocationListener implements LocationListener {
-    private final String URL = "https://shop-manager.herokuapp.com/location";
-//    private final String URL = "http://192.168.56.1:3000/location";
+
     private Context ctx;
 
     public TowelLocationListener(Context ctx) {
@@ -30,40 +22,24 @@ public class TowelLocationListener implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        Date start = new Date();
-        TowelLocation towelLocation = new TowelLocation(location);
-        DatabaseModel<TowelLocation, Integer> model =
-                new DatabaseModel<TowelLocation, Integer>(TowelLocation.class, Integer.class, ctx);
+        if (!TowelLocationServiceHelper.getInstance(ctx).isRunning()) return;
+        DatabaseModel<TowelRoute, Long> routeModel =
+                new DatabaseModel<TowelRoute, Long>(TowelRoute.class, Long.class, ctx);
 
-        Intent mapFragmentIntent = new Intent("TowelLocationReceiver");
-        mapFragmentIntent.putExtra("location", towelLocation);
+        TowelRoute route = TowelLocationServiceHelper.getInstance(ctx).getCurrentRoute();
+        DatabaseTools.createOrUpdate(route, routeModel);
 
-        ctx.sendBroadcast(mapFragmentIntent);
+        TowelLocation towelLocation = new TowelLocation(location, route);
 
-        int persist = DatabaseTools.persist(towelLocation, model);
+        DatabaseModel<TowelLocation, Long> model =
+                new DatabaseModel<TowelLocation, Long>(TowelLocation.class, Long.class, ctx);
+        DatabaseTools.persist(towelLocation, model);
 
-//        List<TowelLocation> locations = null;
-//        if (persist == 0) {
-//            locations = DatabaseTools.fetchAll(model);
-//            StringBuilder sb = new StringBuilder();
-//            for (TowelLocation l : locations) {
-//                sb.append(l.toString()).append(":").append(l.getId()).append(" | ");
-//            }
-//            Toast.makeText(ctx, "location count: " + locations.size(), Toast.LENGTH_SHORT).show();
-//        }
+        DatabaseTools.refresh(route);
 
-//        if (locations != null) {
-            ConnectivityManager connectivityManager =
-                    (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo info = connectivityManager.getActiveNetworkInfo();
-
-            if (info != null && info.isConnected()) {
-                PostTowelLocationTask task = new PostTowelLocationTask(ctx);
-                task.execute(URL, towelLocation.toString());
-            }
-//        }
-        Date stop = new Date();
-        Toast.makeText(ctx, "Executed in: " + String.valueOf(stop.getTime() - start.getTime()) + " ms", Toast.LENGTH_SHORT).show();
+        Intent locationDrawer = new Intent(DrawLocationReceiver.class.getName());
+        locationDrawer.putExtra("location", towelLocation);
+        ctx.sendBroadcast(locationDrawer);
     }
 
     @Override

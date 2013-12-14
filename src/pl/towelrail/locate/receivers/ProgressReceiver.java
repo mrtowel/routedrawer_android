@@ -6,18 +6,31 @@ import android.content.Context;
 import android.content.Intent;
 
 public class ProgressReceiver extends BroadcastReceiver {
-    private ProgressDialog dialog;
+    private ProgressDialog mDialog;
+    private Context mContext;
+
+    public ProgressReceiver(Context mContext) {
+        this.mContext = mContext;
+    }
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (dialog != null && intent.getBooleanExtra("show_dialog", false)) {
-            dialog.dismiss();
-            dialog.show();
-        } else if (intent.getBooleanExtra("show_dialog", false)) {
-            dialog = ProgressDialog.show(context, "1", "2");
-        }
-        else {
-            dialog.dismiss();
+        if (intent.getBooleanExtra("show_dialog", false)) {
+            String title = intent.getStringExtra("title");
+            String message = intent.getStringExtra("message");
+            int maxProgress = intent.getIntExtra("progress_max", 100);
+
+            mDialog = new ProgressDialog(mContext);
+            mDialog.setTitle(title);
+            mDialog.setMessage(message);
+            mDialog.setMax(maxProgress);
+            mDialog.setProgress(0);
+            mDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            mDialog.show();
+        } else if (intent.hasExtra("update_progress")) {
+            mDialog.incrementProgressBy(1);
+        } else {
+            mDialog.dismiss();
         }
     }
 }
