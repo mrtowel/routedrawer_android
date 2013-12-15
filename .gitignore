@@ -17,3 +17,5 @@ out/
 .project
 
 local.properties
+
+authentication_data.xml

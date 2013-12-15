@@ -27,6 +27,4 @@
     <string name="preferences_route_post_url_edit_title">Server URL</string>
     <string name="preferences_route_post_url_edit_key">preferences_route_post_url_edit_key</string>
     <string name="start_preferences_activity">Preferences</string>
-    <string name="api_key">fR5UpXDIoPqyVQUR6d2O3LmwqZc6CEZ8</string>
-    <string name="email">przemyslaw.bis@gmail.com</string>
 </resources>

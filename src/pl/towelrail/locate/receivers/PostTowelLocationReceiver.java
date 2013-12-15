@@ -46,7 +46,7 @@ public class PostTowelLocationReceiver extends BroadcastReceiver {
                         .concat(resources.getString(R.string.api_key));
 
         postRouteService.putExtra("data", filteredRoutes);
-        postRouteService.putExtra("url", TowelHttpConstants.TOWEL_ROUTE_POST_URL_LOCAL);
+        postRouteService.putExtra("url", TowelHttpConstants.TOWEL_ROUTE_POST_URL);
         postRouteService.putExtra("auth_header_key", TowelHttpConstants.API_KEY_AUTHENTICATION_HEADER);
         postRouteService.putExtra("auth_header_value", authHeaderValue);
         mContext.startService(postRouteService);
