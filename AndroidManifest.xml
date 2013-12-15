@@ -30,6 +30,7 @@
         </activity>
         <activity android:name=".view.LocationListActivity"
                   android:label="@string/history_label"/>
+        <activity android:name=".TowelPreferencesActivity" android:label="@string/preferences_activity_title"/>
 
         <service android:name=".service.TowelLocationService"/>
         <service android:name="pl.towelrail.locate.service.PostRouteService"/>

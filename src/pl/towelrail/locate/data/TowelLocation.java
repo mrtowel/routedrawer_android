@@ -15,8 +15,6 @@ import java.math.BigDecimal;
 
 @DatabaseTable(tableName = "locations")
 public class TowelLocation implements Serializable {
-    @DatabaseField
-    private final String api_key = "fR5UpXDIoPqyVQUR6d2O3LmwqZc6CEZ8";
     @Expose
     @DatabaseField(dataType = DataType.BIG_DECIMAL_NUMERIC)
     private BigDecimal lat;
@@ -47,10 +45,6 @@ public class TowelLocation implements Serializable {
     }
 
     public TowelLocation() {
-    }
-
-    public String getApi_key() {
-        return api_key;
     }
 
     public BigDecimal getLat() {

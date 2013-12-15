@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.util.Log;
 import com.github.kevinsawicki.http.HttpRequest;
+import org.apache.http.Header;
 import pl.towelrail.locate.R;
 import pl.towelrail.locate.data.TowelRoute;
 import pl.towelrail.locate.receivers.DatabaseUpdateReceiver;
@@ -15,15 +16,18 @@ import pl.towelrail.locate.receivers.ProgressReceiver;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayList<TowelHttpResponse>> {
     private Context mContext;
     private Intent mProgressDialogIntent;
     private String mUrl;
+    private Header mAuthHeader;
 
-    public PostTowelLocationTask(Context mContext, String mUrl) {
+    public PostTowelLocationTask(Context mContext, String mUrl, Header mAuthHeader) {
         this.mContext = mContext;
         this.mUrl = mUrl;
+        this.mAuthHeader = mAuthHeader;
     }
 
     @Override
@@ -48,6 +52,7 @@ public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayL
         for (int i = 0; i < params.length; i++) {
             HttpRequest request = HttpRequest.post(mUrl)
                     .contentType(HttpRequest.CONTENT_TYPE_JSON)
+//                    .header(mAuthHeader.getName(), mAuthHeader.getValue())
                     .acceptJson()
                     .acceptGzipEncoding()
                     .uncompress(true)

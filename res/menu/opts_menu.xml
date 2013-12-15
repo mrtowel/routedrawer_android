@@ -14,4 +14,7 @@
     <item android:id="@+id/send_data_to_server_item"
           android:title="@string/send_data_to_server_item"
           android:icon="@android:drawable/stat_notify_sync"/>
+
+    <item android:id="@+id/start_preferences_activity"
+          android:title="@string/start_preferences_activity"/>
 </menu>

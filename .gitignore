@@ -1,2 +1,6 @@
 *.class
-.idea
+.idea/
+gen/
+lib/
+libs/
+out/

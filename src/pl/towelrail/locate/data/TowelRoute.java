@@ -24,8 +24,6 @@ public class TowelRoute extends BaseDaoEnabled implements Serializable {
     @DatabaseField(generatedId = true)
     long id;
     @Expose
-    private final String apiKey = "fR5UpXDIoPqyVQUR6d2O3LmwqZc6CEZ8";
-    @Expose
     @DatabaseField(canBeNull = true)
     private long start;
     @Expose

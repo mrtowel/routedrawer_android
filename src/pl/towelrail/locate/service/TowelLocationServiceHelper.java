@@ -21,16 +21,15 @@ public class TowelLocationServiceHelper {
 
     public static TowelLocationServiceHelper getInstance(Context context) {
         if (ourInstance == null) {
-            ourInstance = new TowelLocationServiceHelper(context, new TowelRoute(System.currentTimeMillis() / 1000L));
+            ourInstance = new TowelLocationServiceHelper(context);
         }
         context.sendBroadcast(new Intent(GpsStatusReceiver.class.getName()));
 
         return ourInstance;
     }
 
-    private TowelLocationServiceHelper(Context context, TowelRoute route) {
+    private TowelLocationServiceHelper(Context context) {
         this.mContext = context;
-        this.mTowelRoute = route;
     }
 
     public boolean isRunning() {
@@ -42,7 +41,7 @@ public class TowelLocationServiceHelper {
             Intent intent = new Intent(mContext, TowelLocationService.class);
             mContext.startService(intent);
             mState = ServiceState.RUNNING;
-            mTowelRoute = new TowelRoute(new Date().getTime() / 1000L);
+            mTowelRoute = new TowelRoute(System.currentTimeMillis() / 1000L);
         }
     }
 
@@ -61,7 +60,9 @@ public class TowelLocationServiceHelper {
             DatabaseTools.remove(mTowelRoute);
         }
 
-        mContext.stopService(new Intent(mContext, TowelLocationService.class));
+        boolean succStop = mContext.stopService(new Intent(mContext.getApplicationContext(), TowelLocationService.class));
+
+        Log.d(TowelLocationServiceHelper.class.getSimpleName(),"service stop callback: " + String.valueOf(succStop));
 
         Gson gson = new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
@@ -70,6 +71,7 @@ public class TowelLocationServiceHelper {
     }
 
     public TowelRoute getCurrentRoute() {
-        return mTowelRoute;
+        if (isRunning()) return mTowelRoute;
+        else return null;
     }
 }

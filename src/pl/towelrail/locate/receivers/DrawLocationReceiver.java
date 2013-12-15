@@ -24,8 +24,7 @@ public class DrawLocationReceiver extends BroadcastReceiver {
 
         mGmap.animateCamera(CameraUpdateFactory.newLatLngZoom(location.getLatLng(), 12));
         mGmap.setMyLocationEnabled(true);
-        TowelRoute route = TowelLocationServiceHelper
-                .getInstance(ctx).getCurrentRoute();
+        TowelRoute route = TowelLocationServiceHelper.getInstance(ctx).getCurrentRoute();
         TowelRoute.drawRoute(route, mGmap);
     }
 }

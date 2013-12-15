@@ -46,7 +46,7 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         if (TowelLocationServiceHelper.getInstance(this).isRunning()) {
             MenuItem item = menu.findItem(R.id.start_recording_item);
             if (item != null) {
-                item.setIcon(android.R.drawable.ic_menu_save);
+                item.setIcon(android.R.drawable.presence_video_online);
             }
         }
         return true;
@@ -79,6 +79,9 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
                     Toast.makeText(this, "Stop recording first!", Toast.LENGTH_SHORT).show();
                 }
                 break;
+            case R.id.start_preferences_activity:
+                Intent preferencesActivity = new Intent(MainActivity.this, TowelPreferencesActivity.class);
+                startActivity(preferencesActivity);
             default:
                 break;
         }
