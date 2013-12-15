@@ -21,7 +21,9 @@
     <string name="preferences_route_post_url_edit_dialog_title">Change server URL address</string>
     <string name="preferences_route_post_url_edit_summary">Manage data receiving server address</string>
     <string name="ok">OK</string>
-    <string name="preferences_route_post_url_edit_dialog_message">Manage data receiving server address. Make sure that server is up and running before sending any data.</string>
+    <string name="preferences_route_post_url_edit_dialog_message">Manage data receiving server address. Make sure that
+        server is up and running before sending any data.
+    </string>
     <string name="preferences_route_post_url_edit_title">Server URL</string>
     <string name="preferences_route_post_url_edit_key">preferences_route_post_url_edit_key</string>
     <string name="start_preferences_activity">Preferences</string>

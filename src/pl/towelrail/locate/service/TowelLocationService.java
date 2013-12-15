@@ -3,7 +3,6 @@ package pl.towelrail.locate.service;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.location.Criteria;
 import android.location.LocationManager;
 import android.os.IBinder;

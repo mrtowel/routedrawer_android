@@ -86,7 +86,7 @@ public class DatabaseTools {
         return success;
     }
 
-    public static <T extends BaseDaoEnabled<T, ?>> boolean refresh(T obj){
+    public static <T extends BaseDaoEnabled<T, ?>> boolean refresh(T obj) {
         boolean success;
         try {
             success = obj.refresh() == 1 && obj.update() == 1;

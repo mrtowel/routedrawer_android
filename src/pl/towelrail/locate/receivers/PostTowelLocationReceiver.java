@@ -12,9 +12,6 @@ import pl.towelrail.locate.http.TowelHttpConstants;
 import pl.towelrail.locate.service.PostRouteService;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 
 public class PostTowelLocationReceiver extends BroadcastReceiver {
     private Context mContext;
@@ -32,8 +29,8 @@ public class PostTowelLocationReceiver extends BroadcastReceiver {
         // TODO: preprare filtered query
         ArrayList<TowelRoute> filteredRoutes = new ArrayList<TowelRoute>();
 
-        for (TowelRoute route : routes){
-            if (!route.getUploaded()){
+        for (TowelRoute route : routes) {
+            if (!route.getUploaded()) {
                 filteredRoutes.add(route);
             }
         }
@@ -45,8 +42,8 @@ public class PostTowelLocationReceiver extends BroadcastReceiver {
         Resources resources = mContext.getResources();
         String authHeaderValue =
                 resources.getString(R.string.email)
-                .concat(":")
-                .concat(resources.getString(R.string.api_key));
+                        .concat(":")
+                        .concat(resources.getString(R.string.api_key));
 
         postRouteService.putExtra("data", filteredRoutes);
         postRouteService.putExtra("url", TowelHttpConstants.TOWEL_ROUTE_POST_URL_LOCAL);

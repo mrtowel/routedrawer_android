@@ -10,8 +10,6 @@ import pl.towelrail.locate.db.DatabaseModel;
 import pl.towelrail.locate.db.DatabaseTools;
 import pl.towelrail.locate.receivers.GpsStatusReceiver;
 
-import java.util.Date;
-
 public class TowelLocationServiceHelper {
     private Context mContext;
     private ServiceState mState;
@@ -62,7 +60,7 @@ public class TowelLocationServiceHelper {
 
         boolean succStop = mContext.stopService(new Intent(mContext.getApplicationContext(), TowelLocationService.class));
 
-        Log.d(TowelLocationServiceHelper.class.getSimpleName(),"service stop callback: " + String.valueOf(succStop));
+        Log.d(TowelLocationServiceHelper.class.getSimpleName(), "service stop callback: " + String.valueOf(succStop));
 
         Gson gson = new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()

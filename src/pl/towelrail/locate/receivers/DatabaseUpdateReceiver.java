@@ -17,13 +17,13 @@ public class DatabaseUpdateReceiver extends BroadcastReceiver {
         ArrayList<TowelHttpResponse> responses =
                 (ArrayList<TowelHttpResponse>) intent.getSerializableExtra("post_route_responses");
         int uploadCount = 0;
-        for (TowelHttpResponse towelHttpResponse : responses){
+        for (TowelHttpResponse towelHttpResponse : responses) {
             DatabaseModel<TowelRoute, Long> model =
                     new DatabaseModel<TowelRoute, Long>(TowelRoute.class, Long.class, context);
             TowelRoute route = DatabaseTools.getById(model, towelHttpResponse.getmObjectId());
-            if (route != null && !route.getUploaded()){
+            if (route != null && !route.getUploaded()) {
                 route.setUploaded(true);
-                if (DatabaseTools.update(model, route)){
+                if (DatabaseTools.update(model, route)) {
                     ++uploadCount;
                 }
             }

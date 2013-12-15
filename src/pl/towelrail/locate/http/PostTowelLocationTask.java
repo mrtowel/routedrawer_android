@@ -2,7 +2,6 @@ package pl.towelrail.locate.http;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -15,8 +14,6 @@ import pl.towelrail.locate.receivers.ProgressReceiver;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayList<TowelHttpResponse>> {
     private Context mContext;

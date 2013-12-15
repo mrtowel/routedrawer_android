@@ -3,7 +3,10 @@ package pl.towelrail.locate;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.*;
+import android.preference.EditTextPreference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
 
 public class TowelPreferencesActivity extends PreferenceActivity {
     @Override
@@ -13,7 +16,7 @@ public class TowelPreferencesActivity extends PreferenceActivity {
                 .replace(android.R.id.content, new TowelPreferencesFragment()).commit();
     }
 
-    public static class TowelPreferencesFragment extends PreferenceFragment{
+    public static class TowelPreferencesFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -22,7 +25,7 @@ public class TowelPreferencesActivity extends PreferenceActivity {
                     getActivity().getSharedPreferences("PRIVATE_PREFERENCES", MODE_PRIVATE);
             String apiKey = sharedPreferences.getString("api_key", "");
 
-            if (apiKey == null || apiKey.isEmpty()){
+            if (apiKey == null || apiKey.isEmpty()) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 Resources resources = getResources();
                 String apiKeyFromResources = resources.getString(R.string.api_key);

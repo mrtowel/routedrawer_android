@@ -34,6 +34,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
     @SmallTest
     public void testOther() throws Exception {
-        Assert.assertEquals(2,2*2/2);
+        Assert.assertEquals(2, 2 * 2 / 2);
     }
 }
