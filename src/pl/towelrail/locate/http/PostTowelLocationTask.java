@@ -52,7 +52,7 @@ public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayL
         for (int i = 0; i < params.length; i++) {
             HttpRequest request = HttpRequest.post(mUrl)
                     .contentType(HttpRequest.CONTENT_TYPE_JSON)
-//                    .header(mAuthHeader.getName(), mAuthHeader.getValue())
+                    .header(mAuthHeader.getName(), mAuthHeader.getValue())
                     .acceptJson()
                     .acceptGzipEncoding()
                     .uncompress(true)
