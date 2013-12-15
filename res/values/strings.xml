@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Route Drawer</string>
+    <string name="row_image_description">row image description</string>
+    <string name="row_label">row label</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="http_request">Synchronizing data</string>
+    <string name="start_recording">Start recording</string>
+    <string name="stop_recording">Stop recording</string>
+    <string name="view_all_recording_sessions">View all recordings</string>
+    <string name="gps_dialog_title">GPS</string>
+    <string name="turn_on_gps">For best results, please turn on your GPS receiver</string>
+    <string name="gps_settings">Go to settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="send_data_to_server_item">Send data to server</string>
+    <string name="history_label">Saved routes</string>
+    <string name="network_dialog_title">Networking</string>
+    <string name="turn_on_network">Internet connection unavailable. Check your settings.</string>
+    <string name="network_settings">Go to settings</string>
+    <string name="preferences_activity_title">Preferences</string>
+    <string name="preferences_route_post_url_edit_dialog_title">Change server URL address</string>
+    <string name="preferences_route_post_url_edit_summary">Manage data receiving server address</string>
+    <string name="ok">OK</string>
+    <string name="preferences_route_post_url_edit_dialog_message">Manage data receiving server address. Make sure that
+        server is up and running before sending any data.
+    </string>
+    <string name="preferences_route_post_url_edit_title">Server URL</string>
+    <string name="preferences_route_post_url_edit_key">preferences_route_post_url_edit_key</string>
+    <string name="start_preferences_activity">Preferences</string>
+</resources>
