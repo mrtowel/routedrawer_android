@@ -1,2 +1,2 @@
-routedrawer_android
-===================
+RouteDrawer Android Client
+==========================
