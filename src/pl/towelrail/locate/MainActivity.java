@@ -2,7 +2,6 @@ package pl.towelrail.locate;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -22,6 +21,9 @@ import pl.towelrail.locate.receivers.*;
 import pl.towelrail.locate.service.TowelLocationServiceHelper;
 import pl.towelrail.locate.view.LocationListActivity;
 
+/**
+ * Application starts here.
+ */
 public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     private DrawLocationReceiver mDrawLocationReceiver;
     private GpsStatusReceiver mGpsStatusReceiver;
@@ -100,11 +102,14 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
     protected void onPause() {
         super.onPause();
 
-        unregisterReceiver(mProgressReceiver);
-        unregisterReceiver(mDrawLocationReceiver);
-        unregisterReceiver(mGpsStatusReceiver);
-        unregisterReceiver(mNetworkStatusReceiver);
-        unregisterReceiver(mPostTowelLocationReceiver);
+        ReceiverManager receiverManager = new ReceiverManager(this);
+        receiverManager.unregisterReceivers(
+                mDrawLocationReceiver,
+                mProgressReceiver,
+                mGpsStatusReceiver,
+                mNetworkStatusReceiver,
+                mPostTowelLocationReceiver
+        );
     }
 
     @Override
@@ -129,23 +134,18 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper> {
         }
 
         mDrawLocationReceiver = new DrawLocationReceiver(mGmap, this);
-        IntentFilter filter = new IntentFilter(DrawLocationReceiver.class.getName());
-        registerReceiver(mDrawLocationReceiver, filter);
-
         mProgressReceiver = new ProgressReceiver(this);
-        filter = new IntentFilter(ProgressReceiver.class.getName());
-        registerReceiver(mProgressReceiver, filter);
-
         mGpsStatusReceiver = new GpsStatusReceiver(locationManager);
-        filter = new IntentFilter(GpsStatusReceiver.class.getName());
-        registerReceiver(mGpsStatusReceiver, filter);
-
         mNetworkStatusReceiver = new NetworkStatusReceiver();
-        filter = new IntentFilter(NetworkStatusReceiver.class.getName());
-        registerReceiver(mNetworkStatusReceiver, filter);
-
         mPostTowelLocationReceiver = new PostTowelLocationReceiver(this);
-        filter = new IntentFilter(PostTowelLocationReceiver.class.getName());
-        registerReceiver(mPostTowelLocationReceiver, filter);
+
+        ReceiverManager receiverManager = new ReceiverManager(this);
+        receiverManager.registerReceivers(
+                mDrawLocationReceiver,
+                mProgressReceiver,
+                mGpsStatusReceiver,
+                mNetworkStatusReceiver,
+                mPostTowelLocationReceiver
+        );
     }
 }

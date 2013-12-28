@@ -15,6 +15,9 @@ import pl.towelrail.locate.receivers.ProgressReceiver;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * HTTP POST task executor for {@code TowelRoute} objects.
+ */
 public class PostTowelLocationTask extends AsyncTask<TowelRoute, Integer, ArrayList<TowelHttpResponse>> {
     private Context mContext;
     private Intent mProgressDialogIntent;

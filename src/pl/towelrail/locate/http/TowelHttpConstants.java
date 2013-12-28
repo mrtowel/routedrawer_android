@@ -1,6 +1,8 @@
 package pl.towelrail.locate.http;
 
-
+/**
+ * Static constants only.
+ */
 public class TowelHttpConstants {
     public static final String API_KEY_AUTHENTICATION_HEADER = "X-TOWELRAIL-APIKEY-AUTH";
     public static final String TOWEL_ROUTE_POST_URL = "https://routedrawer.herokuapp.com/route";

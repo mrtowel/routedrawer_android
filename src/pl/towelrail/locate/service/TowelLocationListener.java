@@ -12,6 +12,10 @@ import pl.towelrail.locate.db.DatabaseModel;
 import pl.towelrail.locate.db.DatabaseTools;
 import pl.towelrail.locate.receivers.DrawLocationReceiver;
 
+/**
+ * Location listener. On location changes adds it to current route and persists within database.
+ * Also sends broadcast for {@code DrawLocationReceiver}.
+ */
 public class TowelLocationListener implements LocationListener {
 
     private Context ctx;

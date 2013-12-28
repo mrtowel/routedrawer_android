@@ -9,6 +9,9 @@ import pl.towelrail.locate.data.TowelLocation;
 import pl.towelrail.locate.data.TowelRoute;
 import pl.towelrail.locate.service.TowelLocationServiceHelper;
 
+/**
+ * Draws polyline between points of current measurement.
+ */
 public class DrawLocationReceiver extends BroadcastReceiver {
     private GoogleMap mGmap;
     private Context ctx;

@@ -2,6 +2,9 @@ package pl.towelrail.locate.http;
 
 import java.io.Serializable;
 
+/**
+ * Http response custom. First of all to be used with POST tasks to store created object remote id.
+ */
 public class TowelHttpResponse implements Serializable {
     private int mStatusCode;
     private String mBody;

@@ -5,6 +5,12 @@ import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;
 
+/**
+ * Simplifies access for database helper and data access object.
+ *
+ * @param <T>  Database object class.
+ * @param <ID> Id class of database object.
+ */
 public class DatabaseModel<T, ID> {
     private Class<T> mClass;
     private Class<ID> mIdClass;

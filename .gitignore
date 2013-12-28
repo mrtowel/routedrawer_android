@@ -19,3 +19,5 @@ out/
 local.properties
 
 authentication_data.xml
+
+tests/

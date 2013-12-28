@@ -9,6 +9,9 @@ import android.os.IBinder;
 import android.widget.Toast;
 import pl.towelrail.locate.R;
 
+/**
+ * Location management service. Sets up location listener and location manager.
+ */
 public class TowelLocationService extends Service {
     private LocationManager mLocationManager;
     private TowelLocationListener mTowelLocationListener;

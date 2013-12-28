@@ -11,6 +11,9 @@ import android.provider.Settings;
 import android.widget.Toast;
 import pl.towelrail.locate.R;
 
+/**
+ * Checks connectivity state. Suggests networking settings change if offline.
+ */
 public class NetworkStatusReceiver extends BroadcastReceiver {
 
     @Override

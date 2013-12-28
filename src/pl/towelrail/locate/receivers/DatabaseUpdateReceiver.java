@@ -11,6 +11,9 @@ import pl.towelrail.locate.http.TowelHttpResponse;
 
 import java.util.ArrayList;
 
+/**
+ * Sets upload state to {@code true}. Intent must contain {@code ArrayList} of {@code TowelHttpResponse}.
+ */
 public class DatabaseUpdateReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {

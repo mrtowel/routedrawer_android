@@ -13,6 +13,9 @@ import com.j256.ormlite.table.DatabaseTable;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/**
+ * Location database class.
+ */
 @DatabaseTable(tableName = "locations")
 public class TowelLocation implements Serializable {
     @Expose

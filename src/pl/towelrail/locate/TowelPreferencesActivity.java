@@ -8,6 +8,9 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 
+/**
+ * Preferences window activity for basic settings management.
+ */
 public class TowelPreferencesActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
