@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.widget.Toast;
+import org.mindrot.jbcrypt.BCrypt;
 import pl.towelrail.locate.R;
 import pl.towelrail.locate.data.TowelRoute;
 import pl.towelrail.locate.db.DatabaseModel;
@@ -12,7 +14,11 @@ import pl.towelrail.locate.http.TowelHttpConstants;
 import pl.towelrail.locate.service.PostRouteService;
 
 import java.util.ArrayList;
+import java.util.Date;
 
+/**
+ * Prepares data and authentication header for POST task and starts {@code PostRouteService}.
+ */
 public class PostTowelLocationReceiver extends BroadcastReceiver {
     private Context mContext;
 
@@ -40,13 +46,24 @@ public class PostTowelLocationReceiver extends BroadcastReceiver {
                 new Intent(mContext.getApplicationContext(), PostRouteService.class);
 
         Resources resources = mContext.getResources();
+        Date start = new Date();
+        Intent progress = new Intent(ProgressReceiver.class.getName());
+        progress.putExtra("show_dialog", true);
+        mContext.sendBroadcast(progress);
+        String hashedApiKey = BCrypt.hashpw(resources.getString(R.string.api_key), BCrypt.gensalt());
+        progress.removeExtra("show_dialog");
+        mContext.sendBroadcast(progress);
+
+        Toast.makeText(mContext,
+                String.format("Hashing password took %s s, result: %s", ((double) (new Date().getTime() - start.getTime())) / 1000d, hashedApiKey),
+                Toast.LENGTH_SHORT).show();
         String authHeaderValue =
                 resources.getString(R.string.email)
                         .concat(":")
-                        .concat(resources.getString(R.string.api_key));
+                        .concat(hashedApiKey);
 
         postRouteService.putExtra("data", filteredRoutes);
-        postRouteService.putExtra("url", TowelHttpConstants.TOWEL_ROUTE_POST_URL);
+        postRouteService.putExtra("url", TowelHttpConstants.TOWEL_ROUTE_POST_URL_LOCAL);
         postRouteService.putExtra("auth_header_key", TowelHttpConstants.API_KEY_AUTHENTICATION_HEADER);
         postRouteService.putExtra("auth_header_value", authHeaderValue);
         mContext.startService(postRouteService);

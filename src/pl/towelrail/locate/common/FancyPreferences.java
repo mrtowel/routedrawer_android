@@ -7,6 +7,9 @@ import android.preference.PreferenceManager;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * SharedPreferences helper for quick get/edit.
+ */
 public class FancyPreferences {
     private FancyPreferences() {
     }

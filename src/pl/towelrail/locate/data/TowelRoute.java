@@ -19,6 +19,9 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Iterator;
 
+/**
+ * Route database class.
+ */
 @DatabaseTable(tableName = "route")
 public class TowelRoute extends BaseDaoEnabled implements Serializable {
     @DatabaseField(generatedId = true)

@@ -5,6 +5,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+/**
+ * Progress dialog receiver. Contains progress bar.
+ * Must be registered/unregistered in working Activity context.
+ */
 public class ProgressReceiver extends BroadcastReceiver {
     private ProgressDialog mDialog;
     private Context mContext;

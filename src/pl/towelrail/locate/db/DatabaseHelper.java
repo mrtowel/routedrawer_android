@@ -10,11 +10,17 @@ import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
+/**
+ * Provides methods for each database object management.
+ *
+ * @param <T>  Database object class.
+ * @param <ID> Id class of database object.
+ */
 public class DatabaseHelper<T, ID> extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = "towelrail_location.db";
     private static final int DATABASE_VERSION = 1;
 
-    private Dao<T, ID> mLocateDao = null;
+    private Dao<T, ID> mDatabaseObjectDao = null;
     private Class<T> mClass;
     private Class<ID> mIdClass;
 
@@ -25,7 +31,7 @@ public class DatabaseHelper<T, ID> extends OrmLiteSqliteOpenHelper {
 
     public DatabaseHelper(Context context) {
         this(context, DATABASE_NAME, null, DATABASE_VERSION);
-        mLocateDao = null;
+        mDatabaseObjectDao = null;
     }
 
     @Override
@@ -52,14 +58,14 @@ public class DatabaseHelper<T, ID> extends OrmLiteSqliteOpenHelper {
         mClass = clazz;
         mIdClass = idClass;
 
-        if (mLocateDao == null) {
-            mLocateDao = new DatabaseDao(getConnectionSource(), mClass);
+        if (mDatabaseObjectDao == null) {
+            mDatabaseObjectDao = new DatabaseDao(getConnectionSource(), mClass);
         }
 
-        if (!mLocateDao.isTableExists()) {
+        if (!mDatabaseObjectDao.isTableExists()) {
             onCreate(getWritableDatabase(), connectionSource);
         }
 
-        return mLocateDao;
+        return mDatabaseObjectDao;
     }
 }

@@ -10,6 +10,9 @@ import pl.towelrail.locate.db.DatabaseModel;
 import pl.towelrail.locate.db.DatabaseTools;
 import pl.towelrail.locate.receivers.GpsStatusReceiver;
 
+/**
+ * {@code TowelLocationService} helper singleton.
+ */
 public class TowelLocationServiceHelper {
     private Context mContext;
     private ServiceState mState;

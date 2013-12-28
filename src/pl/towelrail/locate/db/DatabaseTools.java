@@ -7,6 +7,9 @@ import com.j256.ormlite.misc.BaseDaoEnabled;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * Toolkit for smooth database operations. Contains only static methods. Can not be instantiated.
+ */
 public class DatabaseTools {
     private DatabaseTools() {
     }

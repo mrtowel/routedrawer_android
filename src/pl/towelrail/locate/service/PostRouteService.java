@@ -10,6 +10,9 @@ import pl.towelrail.locate.http.PostTowelLocationTask;
 import java.util.ArrayList;
 import java.util.UUID;
 
+/**
+ * Data upload service for {@code TowelRoute} objects.
+ */
 public class PostRouteService extends IntentService {
     public PostRouteService() {
         super(UUID.randomUUID().toString());
