@@ -47,12 +47,7 @@ public class PostTowelLocationReceiver extends BroadcastReceiver {
 
         Resources resources = mContext.getResources();
         Date start = new Date();
-        Intent progress = new Intent(ProgressReceiver.class.getName());
-        progress.putExtra("show_dialog", true);
-        mContext.sendBroadcast(progress);
         String hashedApiKey = BCrypt.hashpw(resources.getString(R.string.api_key), BCrypt.gensalt());
-        progress.removeExtra("show_dialog");
-        mContext.sendBroadcast(progress);
 
         Toast.makeText(mContext,
                 String.format("Hashing password took %s s, result: %s", ((double) (new Date().getTime() - start.getTime())) / 1000d, hashedApiKey),
